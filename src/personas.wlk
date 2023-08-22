@@ -60,7 +60,7 @@ object bruno {
 }
 
 object ramiro {
-	var nivelContractura
+	var nivelContractura=0
 	var pielGrasosa
 	
 	method recibirMasajes(){
