@@ -1,9 +1,11 @@
-import comidas.*
-
 object olivia {
 	var gradoDeConcentracion = 6
 	
+	/* GETTERS ************************/
+	
 	method gradoDeConcentracion() = gradoDeConcentracion
+	
+	/************************************/
 	
 	method recibirMasajes(){
 		gradoDeConcentracion += 3
@@ -21,6 +23,14 @@ object bruno {
 	var tieneSed = false
 	var peso = 55000
 	
+	/* GETTERS ************************/
+	
+	method esFeliz() = esFeliz
+	method tieneSed() = tieneSed
+	method peso() = peso
+	
+	/*********************************/
+	
 	method recibirMasajes(){
 		esFeliz = true
 	}
@@ -34,11 +44,9 @@ object bruno {
 		tieneSed = false
 	}
 	
-	method comer(comida){
-		if (comida.nombre() == "fideos") {
-			peso += 250
-			tieneSed = true	
-		}
+	method comerFideos(){
+		peso += 250
+		tieneSed = true	
 	}
 	
 	method correr(){
@@ -49,17 +57,17 @@ object bruno {
 		esFeliz = false
 	}
 	
-	method estaPerfecto() = esFeliz and !tieneSed and peso.between(50000,70000)
+	method estaPerfecto() = esFeliz and not tieneSed and peso.between(50000,70000)
 	
 	method mediodiaEnCasa(){
-		self.comer(fideos)
+		self.comerFideos()
 		self.tomarAgua()
 		self.verNoticiero()
 	}
 }
 
 object ramiro {
-	var nivelContractura=0
+	var nivelContractura = 0
 	var pielGrasosa
 	
 	method recibirMasajes(){
@@ -70,10 +78,8 @@ object ramiro {
 		pielGrasosa = false
 	}
 	
-	method comer(comida){
-		if (comida.nombre() == "bigmac") {
-			pielGrasosa = true
-		}
+	method comerBigmac(){
+		pielGrasosa = true
 	}
 	
 	method bajarALaFosa() {
@@ -87,7 +93,7 @@ object ramiro {
 	
 	method diaDeTrabajo() {
 		self.bajarALaFosa()
-		self.comer(bigmac)
+		self.comerBigmac()
 		self.bajarALaFosa()
 	}
 }
