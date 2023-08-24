@@ -16,7 +16,6 @@ object olivia {
 	}
 }
 
-
 object bruno {
 	var esFeliz = true
 	var tieneSed = false
