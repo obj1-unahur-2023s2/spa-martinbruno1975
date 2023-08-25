@@ -68,7 +68,15 @@ object bruno {
 
 object ramiro {
 	var nivelContractura = 0
-	var pielGrasosa
+	var pielGrasosa = false
+	
+	/* GETTERS ************************/
+	
+	method nivelContractura() = nivelContractura
+	method pielGrasosa() = pielGrasosa
+	
+	/**********************************/
+	
 	
 	method recibirMasajes(){
 		nivelContractura = 0.max(nivelContractura - 2)
@@ -95,13 +103,5 @@ object ramiro {
 		self.bajarALaFosa()
 		self.comerBigmac()
 		self.bajarALaFosa()
-	}
-}
-
-object spa {
-	
-	method atender(persona){
-		persona.recibirMasajes()
-		persona.darBanioDeVapor()	
 	}
 }
